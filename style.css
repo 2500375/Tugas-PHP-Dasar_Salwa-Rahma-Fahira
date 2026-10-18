@@ -1,0 +1,302 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --pink: #f4cbd4;
+    --pink-soft: #fff0f3;
+    --pink-dark: #bd788c;
+    --sage: #dce8d5;
+    --sage-dark: #71876b;
+    --cream: #fffaf7;
+    --text: #514b4b;
+    --white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 40px 24px;
+    background: linear-gradient(135deg, var(--pink-soft), var(--sage));
+    color: var(--text);
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 32px;
+    background: rgba(255, 250, 247, 0.95);
+    border-radius: 24px;
+    box-shadow: 0 10px 35px rgba(110, 95, 95, 0.12);
+}
+
+h1 {
+    margin: 0 0 8px;
+    color: var(--pink-dark);
+    font-size: 30px;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 24px;
+    color: var(--sage-dark);
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 16px;
+    margin: 4px 0;
+    border: none;
+    border-radius: 12px;
+    background: var(--pink);
+    color: #68444e;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: var(--pink-dark);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+    border-radius: 16px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+}
+
+thead {
+    background: var(--sage);
+}
+
+th {
+    padding: 16px 12px;
+    color: #465b43;
+    text-align: left;
+    font-size: 13px;
+}
+
+td {
+    padding: 14px 12px;
+    border-bottom: 1px solid #f1e7e7;
+    font-size: 13px;
+}
+
+tbody tr:nth-child(even) {
+    background: #fff5f6;
+}
+
+tbody tr:hover {
+    background: #edf3e9;
+}
+
+td .btn {
+    white-space: nowrap;
+    background: var(--sage);
+    color: #465b43;
+}
+
+td .btn:hover {
+    background: var(--sage-dark);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px 12px;
+    }
+
+    .container {
+        padding: 20px 14px;
+        border-radius: 18px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    th, td {
+        padding: 12px 10px;
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 600px;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form label {
+    display: block;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--sage-dark);
+}
+
+form input,
+form textarea {
+    display: block;
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #ead9dd;
+    border-radius: 12px;
+    background: #fffefe;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 14px;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: 2px solid var(--pink);
+    border-color: var(--pink-dark);
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form button {
+    align-self: flex-start;
+    margin-top: 12px;
+}
+
+
+body:has(form) .container h1 {
+    text-align: center;
+    width: 100%;
+}
+
+body:has(form) .container > p {
+    text-align: center;
+}
+
+table th:nth-child(5),
+table td:nth-child(5),
+table th:nth-child(6),
+table td:nth-child(6),
+table th:nth-child(7),
+table td:nth-child(7),
+table th:nth-child(8),
+table td:nth-child(8) {
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+.form-navigation {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn-kembali {
+    display: inline-block;
+    padding: 10px 18px;
+    background-color: #e6ebdf;
+    color: #687b60;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.btn-kembali:hover {
+    background-color: #d5dfcc;
+    transform: translateY(-2px);
+}
+
+.hasil-card {
+    max-width: 600px;
+    margin: 40px auto !important;
+    padding: 30px !important;
+    box-sizing: border-box;
+}
+
+.ikon-sukses {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #e4f2e8;
+    color: #568667;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.isi-pesan {
+    padding: 20px;
+    margin-top: 20px;
+    background: #fff0f5;
+    border: 1px solid #f3dce5;
+    border-radius: 16px;
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+.tombol-hasil {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.tombol-hasil a {
+    display: inline-block;
+    padding: 12px 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.tombol-hasil .btn-utama {
+    background: #d994ad;
+    color: white;
+}
+
+.tombol-hasil .btn-kedua {
+    background: #e6ebdf;
+    color: #687b60;
+}
+
+@media (max-width: 600px) {
+    .hasil-card {
+        margin: 20px auto !important;
+        padding: 22px 18px !important;
+    }
+
+    .tombol-hasil {
+        flex-direction: column;
+    }
+
+    .tombol-hasil a {
+        text-align: center;
+    }
+}
